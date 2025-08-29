@@ -27,7 +27,6 @@ export default function Navbar() {
               <a
                 className="nav-link"
                 href="/experience"
-                target="_blank"
                 rel="noreferrer"
               >
                 Experience
