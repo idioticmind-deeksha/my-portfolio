@@ -20,14 +20,13 @@ export default function ProjectsPage() {
                 <h5 className="card-title">{r.name}</h5>
                 <p className="card-text flex-grow-1">{r.description ?? "No description."}</p>
                 <div className="d-flex justify-content-between align-items-center">
-                  <small>⭐ {r.stargazers_count} • 🍴 {r.forks_count}</small>
+                  <small>Stars: ⭐ {r.stargazers_count}  Forks : {r.forks_count}</small>
                   <div>
-                    <a className="btn btn-sm btn-outline-primary me-2" href={r.html_url} target="_blank" rel="noreferrer">Repo</a>
-                    <Link href={`/projects/${encodeURIComponent(r.name)}`}><button className="btn btn-sm btn-primary">Details</button></Link>
+                    <a className="btn btn-sm btn-outline-primary me-2 fs-5" href={r.html_url} target="_blank" rel="noreferrer">Repo</a>
                   </div>
                 </div>
               </div>
-              <div className="card-footer"><small>{r.language ?? "—"}</small></div>
+              <div className="card-footer">Language: <small>{r.language ?? "—"}</small></div>
             </div>
           </div>
         ))}

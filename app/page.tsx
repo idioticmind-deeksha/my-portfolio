@@ -27,9 +27,11 @@ export default function Home() {
           
         />
         <h3 className="mt-3">{user.name || user.login}</h3>
+        <p className="lead  mt-2">Frontend developer — React, TypeScript, Bootstrap</p>
+
          <a
           href={user.html_url}
-          className="btn btn-outline-primary btn-lg mb-4"
+          className="btn btn-primary mb-4 w-100 fs-5"
           target="_blank"
           rel="noreferrer"
         >
