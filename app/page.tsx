@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { GitHubData } from "../types/github";
+import Image from "next/image";
 
 export default function Home() {
   // Resolve JSON file path (must be in project-root/data/github.json)
@@ -15,10 +16,11 @@ export default function Home() {
   return (
     <div className="row align-items-center">
       <div className="col-md-4 text-center">
-        <img
+        <Image
           src={user.avatar_url}
+          width={180}
+          height={180}
           className="img-fluid rounded-circle"
-          style={{ maxWidth: 180 }}
           alt={user.name || user.login}
         />
         <h3 className="mt-3">{user.name || user.login}</h3>
